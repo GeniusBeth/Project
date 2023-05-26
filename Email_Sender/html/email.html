@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Sender</title>
+    <link rel="stylesheet" href="../css/estyle.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/themes/nano.min.css" /> 
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="#"><img src="../images/tincan_logo.png"></a>
+            </div>
+            <div class="heading">
+                <h2>Email Sender</h2>
+            </div>
+            <ul class="nav-links">
+                <li>
+                    <a href="#" class="btn-outline-primary icon-btn border-rounded" style="width:40px;"><img width="90%" src="../images/search.svg"></a>
+                </li>
+                <li>
+                    <a class="btn btn-primary border-rounded" href="#">Send</a>
+                </li>
+            </ul>
+        </nav>
+        <section class="section">
+            <div class="side-bar">
+                <ul id="firstUl">
+                    <li class="list bgi"><img src="../images/image.png">
+                        <p>Background Image</p>
+                    </li>
+                    <li class="list bgc"><img src="../images/background.png">
+                        <p>Background Color</p>
+                    </li>
+                    <li class="list text"><img src="../images/text.png">
+                        <p>Text</p>
+                    </li>
+                    <input type="file" name="" id="file">
+                    <label for="file" id="uploadBtn"><li class="list up"><img src="../images/upload.png">
+                        <p>Upload Image</p>
+                    </li></label>
+                </ul>
+            </div>
+            <main class="main">
+                <h2>Design Dynamic and Creative Emails</h2>
+                <p>Create and customize emails by editing your preferred theme</p>
+                    <div class="mainemail">
+                        <input type="email" name="email" placeholder="Email">
+                    </div>
+                    <div class="color-picker"></div>
+                    <!-- <div class="email-body"> -->
+                        <div class="image-holder">
+
+                        </div>
+
+                        <div id="mother" class="swiper container slide" style="align-items: center; display: flex;">
+                            <div class="content swiper-wrapper">
+                               
+                                <div tabindex="1" class="card-wrapper swiper-slide">
+                                    <div class="card-container">
+                                    <div class="card">
+                                        <div class="image-content">
+                                            <div class="card-image">
+                                                <img src="../Images/tincan_logo.png" width="100%" class="card-img">
+                                            </div>
+                                            <div class="card-body-bg">
+                                                <div class="card-body">
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam quidem esse dolore sapiente maiores obcaecati, animi rerum dicta nesciunt odio expedita repudiandae at exercitationem autem magni fugit ducimus aliquid ea!
+                                                </div>
+                                            </div>
+                                            <div class="card-content">
+                                                <Footer class="footer"></Footer>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <!-- <div class="swiper-pagination"></div> -->
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                    </div>
+            </main>
+        </section>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@editorjs/editorjs@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/pickr.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="../javascript/email.js" type="module"></script>
+    
+</body>
+</html>

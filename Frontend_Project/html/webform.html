@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width:100vw;
+            min-height: 100vh;
+            background-image:linear-gradient(rgba(155, 130, 105, 0.845), rgba(155, 130, 105, 0.884)),url(../images/background.jpg);
+            background-size: cover;
+            background-position: center;
+            box-shadow: 0px 50px 50px rgba(0, 0, 0, 0.1);
+        }
+        .container{
+            position: relative;
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+        }
+        .container h1{
+            color: #9B8269;
+            margin-bottom: 30px;
+            text-align: center;
+            line-height: 1em;
+        }
+        .container .inputBox{
+            position: relative;
+            width:300px;
+            height:35px;
+            margin-bottom: 45px;
+        }
+        .container .inputBox input{
+            position: absolute;
+            top:0;
+            left:0;
+            width:100%;
+            outline: none;
+            border: 0.5px solid #e3dfdf;
+            border-radius: 5px;
+            background: transparent;
+            padding:10px;
+            font-size: 16px;
+            font-weight: 300;
+            display: block;
+        }
+        .container .inputBox span{
+            position:absolute;
+            top: 1px;
+            left: 1px;
+            padding:10px;
+            display: inline-block;
+            font-size: 16px;
+            color: black;
+            font-weight: 300;
+            transition: 0.5s;
+            pointer-events: none;
+        }
+        .container .inputBox input:focus ~ span{
+            transform: translateX(-10px) translateY(-32px);
+            font-size: 12px;
+            font-weight: 500;
+        }
+        /* .container .inputBox input:active ~ span{
+            transform: none;
+            font-size: 12px;
+            font-weight: 500;
+            transition: 0.5s;
+        }  */
+        .container .inputBox .image{
+            position:absolute;
+            top: 15px;
+            right:10px;
+            width:12px;
+            height:12px;
+            visibility: hidden;
+        }
+        .container .inputBox small{
+            visibility: hidden;
+            position: absolute;
+            bottom: -21px;
+            left: 0;
+            font-size: 10px;
+            
+        }
+        .container .inputBox #btn{
+            background: #9B8269;
+            color:#fff;
+            border: none;
+            font-weight: 500;
+            cursor: pointer;
+        }
+        .container .inputBox #btn:hover{
+            background:rgba(155, 130, 105, 83%);
+        }
+        .group{
+            display:flex;
+            justify-content: space-between;
+        }
+        .group a:nth-child(2){
+            text-decoration: none;
+        }
+        .container .inputBox.success input{
+            border-color: #2ecc71;
+        }
+        .container .inputBox.error input{
+            border-color: #e74c3c;
+        }
+        .container .inputBox.success img[src="../images/approved1.png"]{
+        visibility: visible;
+        }
+        .container .inputBox.error img[src="../images/warning.png"]{
+            visibility: visible;
+        }
+        .container .inputBox.error small{
+            visibility: visible;
+            color: #e74c3c;
+        }
+        .container .inputBox .popup{
+            position: absolute;
+            width:400px;
+            background: #fff;
+            border-radius:6px;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            top:-550px;
+            left:-50px;
+            text-align: center;
+            padding:20px;
+            transform:scale(0.1);
+            visibility: hidden;
+            transition: transform 0.5s top 0.5s;
+        }
+        .container .inputBox .popup .open-popup{
+            visibility: hidden;
+            top:-250px;
+            transform:scale(1);
+        }
+        .container .inputBox .popup img{
+            display: block;
+            width:100px;
+            height: 100px;
+            margin-top: -60px;
+        }
+        .container .inputBox .popup h2{
+            font-size: 38px;
+            font-weight: 500;
+            margin: 30px 0 10px;
+        }
+        .container .inputBox .popup button{
+            width:100%;
+            margin-top: 50px;
+            padding:10px 0;
+            background: #1D7C21;
+            color: #fff;
+            border: none;
+            outline: none;
+            font-size: 18px;
+            border-radius: 4px;
+            cursor: pointer;
+            box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="title">Sign Up</h1>
+    <form id="form">
+        <div class="inputBox">
+            <input type="text" id="name">
+            <span>Full Name</span>
+            <img src="../images/approved1.png" class="image">
+            <img src="../images/warning.png" class="image">
+            <small>Error Message</small>
+        </div>
+        <div class="inputBox">
+            <input type="email" id="email">
+            <span>Email</span>
+            <img src="../images/approved1.png" class="image">
+            <img src="../images/warning.png" class="image">
+            <small>Error Message</small>
+        </div>
+        <div class="inputBox">
+            <input type="password" id="password">
+            <span>Password</span>
+            <img src="../images/approved1.png" class="image">
+            <img src="../images/warning.png" class="image">
+            <small>Error Message</small>
+        </div>
+        <div class="inputBox">
+            <input type="password" id="confirmPassword">
+            <span>Confirm Password</span>
+            <img src="../images/approved1.png" class="image">
+            <img src="../images/warning.png" class="image">
+            <small>Error Message</small>
+        </div>
+        <div class="inputBox">
+            <input type="submit" value="Login" id="btn" onclick="openPopup()">
+            <div class="popup" id="popup">
+                <img src="../images/correct.png">
+                <h2>Thank You!</h2>
+                <p>Your details has been submitted Successfully. Thanks!</p>
+                <button type="button" onclick="closePopup()">OK</button>
+            </div>
+        </div>
+        <div class="group">
+            <a href="#">Forgot Password</a>
+            <a href="#" id="sign">SignIn</a>
+        </div>
+    </form>
+    </div>
+    <script>
+        const form = document.getElementById('form');
+        const name = document.getElementById('name');
+        const email = document.getElementById('email');
+        const password = document.getElementById('password');
+        const confirmPassword = document.getElementById('confirmPassword');
+        const title = document.getElementById('title');
+        const sign = document.getElementById('sign');
+        const popup = document.getElementById('popup');
+        form.addEventListener('submit', (e) =>{
+            e.preventDefault();
+            checkInputs();
+        });
+
+        function checkInputs() {
+            const nameValue = name.value.trim();
+            const emailValue = email.value.trim();
+            const passwordValue = password.value.trim();
+            const confirmPasswordValue = confirmPassword.value.trim();
+
+
+            if(nameValue === ''){
+                setErrorFor(name, 'Enter your full name');
+            }
+            else{
+                setSuccessFor(name);
+            }
+            if(emailValue === ''){
+                setErrorFor(email, 'Enter your email address');
+            }
+            else if(!validateEmail(emailValue)){
+                setErrorFor(email, 'Enter a valid email address');
+            }
+            else{
+                setSuccessFor(email);
+            }
+            if(passwordValue == ''){
+                setErrorFor(password, 'Enter your password');
+            }
+            else {
+                setSuccessFor(password);
+            }
+            if(confirmPasswordValue == ''){
+                setErrorFor(confirmPassword, 'Confirm your password');
+            }
+            else if(passwordValue !== confirmPasswordValue){
+                setErrorFor(confirmPassword, 'Password does not match');
+            }
+            else {
+                setSuccessFor(confirmPassword);
+            }
+        }
+        function setErrorFor(input, message){
+            const inputBoxVal = input.parentElement;
+            const small = inputBoxVal.querySelector('small');
+
+            small.innerText = message;
+
+            inputBoxVal.className = 'inputBox error';
+        }
+        function setSuccessFor(input) {
+                const inputBoxVal = input.parentElement;
+                const small = inputBoxVal.querySelector('small');
+                inputBoxVal.className = 'inputBox success';
+            }
+        function validateEmail(email){
+            return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
+        }
+        function openPopup(){
+            popup.classList.add("open-popup");
+        }
+        function closePopup(){
+            popup.classList.remove("open-popup");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    
+    <title>Slider </title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body{
+                min-height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .slide{
+                width: 950px;
+            }
+            .content{
+                margin:0 40px;
+                display: flex;
+                flex-direction: row;
+            }
+            .card{
+                width:320px;
+                height:300px;
+                max-width:320px;
+                margin: auto 10px;
+                background-color: antiquewhite;
+            }
+            .card-image{
+                /* position:relative; */
+                height: 250px;
+                width: 100%;
+            } 
+            .card-image .card-img{
+                height:60px;
+                width: 100%;
+                object-fit: cover;
+                background-color:grey;
+            }
+            .card-content .footer{
+                background-color: #265df2;
+                width:100%;
+                height: 60px;
+            }
+            .iconplus {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        </style>
+</head>
+<body>
+    <div class="slide container swiper"> 
+        <div class="content swiper-wrapper"> 
+            <div class="card-wrapper swiper-slide"> 
+                <div class="card  iconplus">
+                    <div class="image-content ">
+                        <div class="icon">
+                            <img src="../Images/plus.png">
+                        </div>
+                        <div class="card-content">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-wrapper swiper-slide"> 
+                <div class="card">
+                    <div class="image-content">
+                        <div class="card-image">
+                            <img src="../Images/tincan_logo.png" class="card-img">
+                        </div>
+                        <div class="card-content">
+                            <Footer class="footer"></Footer>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-wrapper swiper-slide"> 
+                <div class="card">
+                    <div class="image-content">
+                        <div class="card-image">
+                            <img src="../Images/tincan_logo.png" class="card-img">
+                        </div>
+                        <div class="card-content">
+                            <Footer class="footer"></Footer>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-wrapper swiper-slide"> 
+                <div class="card">
+                    <div class="image-content">
+                        <div class="card-image">
+                            <img src="../Images/tincan_logo.png" class="card-img">
+                        </div>
+                        <div class="card-content">
+                            <Footer class="footer"></Footer>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-wrapper swiper-slide"> 
+                <div class="card">
+                    <div class="image-content">
+                        <div class="card-image">
+                            <img src="../Images/tincan_logo.png" class="card-img">
+                        </div>
+                        <div class="card-content">
+                            <Footer class="footer"></Footer>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-wrapper swiper-slide"> 
+                <div class="card">
+                    <div class="image-content">
+                        <div class="card-image">
+                            <img src="../Images/tincan_logo.png" class="card-img">
+                        </div>
+                        <div class="card-content">
+                            <Footer class="footer"></Footer>
+                            <!-- <h2 class="name">Ally Pearson</h2>
+                            <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat molestias, nulla blanditiis iure assumenda rerum dicta obcaecati voluptatum accusantium delectus.
+                            </p>
+                            <button class="button">View More</button> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="swiper-pagination"></div> -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+        
+        
+        
+<script src="../javascript/sript.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+</body>
+</html>

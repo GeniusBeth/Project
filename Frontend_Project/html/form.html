@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+</head>
+<body>
+<form action="about.html" method="get" enctype="multipart/form-data">
+   <label for="name">Name :</label> 
+   <input type="text" name="name" id="name"  required>
+   <br><br>
+   <label for="password">Password :</label> 
+   <input type="password" name="name"   placeholder="password" required>
+   <br><br>
+   <label for="email">Email :</label> 
+   <input type="email" name="email"  id="email" required>
+   <br><br>
+   <label for="age">Age :</label> 
+   <input type="number" name="age"  id="age" min="18" max="35" step="2" required>
+   <br><br>
+   <label for="date">Birthdate :</label> 
+   <input type="date" name="birthdate"  id="date" required><br>
+   <p>Favourite Food</p>
+   <label for="banana">Banana</label> 
+   <input type="checkbox" name="banana"  id="banana"><br>
+   <label for="apple">Apple</label> 
+   <input type="checkbox" name="apple"  id="apple">
+   <br>
+   <p>Gender</p>
+   <label for="male">Male</label> 
+   <input type="radio" name="gender"  id="male" value="male">
+   <label for="female">Female</label> 
+   <input type="radio" name="gender"  id="female" value="female">
+   <br>
+   <label for="eyecolour">Eye colour</label>
+   <select name="eyecolur" id="eyecolour">
+    <option value="green">Green</option>
+    <option value="red" label="Red"></option>
+   </select><br><br>
+   <label for="bio">Bio</label>
+   <textarea name="bio" id="bio"></textarea><br>
+   <input type="hidden" name="hidden" value="hello">
+   <label for="file">File</label>
+   <input type="file" name="file" id="file"><br><br>
+   <label for="phone">Phone Number :</label>
+   <input type="tel" name="phone" id="phone"><br><br>
+   <label for="url">URL :</label>
+   <input type="url" name="url" id="url"><br><br>
+   <label for="color">colour :</label>
+   <input type="color" name="color" id="color"><br><br>
+   <button type="submit">Submit</button>
+   <button type="reset">Reset</button>
+</form>
+</body>
+</html>

@@ -1,0 +1,13 @@
+{
+  "folders": [
+	{
+		"path": ".."
+	},
+	{
+		"path": "../../Email_Sender"
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "Frontend_Project"
+  }
+}
